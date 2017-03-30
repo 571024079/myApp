@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HDServiceLeftContentView">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="571"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="8cr-bF-neL">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAv-tp-rqX" userLabel="scrollV">
+                    <color key="backgroundColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="X8Z-oE-KFs"/>
+                        <constraint firstAttribute="width" constant="5" id="zcd-PK-Y7L"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnM-TU-2NH" userLabel="rightLine">
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="vZ3-Nj-Oon"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="8cr-bF-neL" secondAttribute="bottom" id="GTS-T6-Noh"/>
+                <constraint firstAttribute="trailing" secondItem="KnM-TU-2NH" secondAttribute="trailing" constant="5" id="HQl-eX-b7v"/>
+                <constraint firstAttribute="trailing" secondItem="8cr-bF-neL" secondAttribute="trailing" constant="10" id="PV9-Ip-4rg"/>
+                <constraint firstItem="XAv-tp-rqX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bIk-C6-JeY"/>
+                <constraint firstItem="8cr-bF-neL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gL3-bo-hew"/>
+                <constraint firstItem="KnM-TU-2NH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hoK-aV-0TM"/>
+                <constraint firstAttribute="trailing" secondItem="XAv-tp-rqX" secondAttribute="trailing" id="jwd-Yu-tL2"/>
+                <constraint firstItem="8cr-bF-neL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="tV0-iM-jN4"/>
+                <constraint firstAttribute="bottom" secondItem="KnM-TU-2NH" secondAttribute="bottom" id="zPK-20-flJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="labelGView" destination="XAv-tp-rqX" id="QTe-sI-3os"/>
+                <outlet property="labelGViewHeight" destination="X8Z-oE-KFs" id="6jr-ZX-193"/>
+                <outlet property="labelGViewTopHeight" destination="bIk-C6-JeY" id="3HU-23-LHp"/>
+                <outlet property="tableView" destination="8cr-bF-neL" id="oZx-gf-XkW"/>
+            </connections>
+            <point key="canvasLocation" x="-146.5" y="-147.5"/>
+        </view>
+    </objects>
+</document>

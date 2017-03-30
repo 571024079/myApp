@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectMileageStyleTableViewCell" rowHeight="85" id="KGk-i7-Jjw" customClass="ProjectMileageStyleTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="698" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="698" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoz-bf-0MI">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="IHV-bR-iZi"/>
+                            <constraint firstAttribute="height" constant="25" id="hUr-nt-VWf"/>
+                        </constraints>
+                        <state key="normal" image="work_list_26.png"/>
+                        <connections>
+                            <action selector="mileageAddAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JWR-Rr-dbd"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公里数范围：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6L-vm-6rL">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="uG7-Hf-ZFl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mns-ky-ndn">
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="materialtime_edit_edit.png" translatesAutoresizingMaskIntoConstraints="NO" id="yXB-xd-Luo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="YVE-pG-iHJ"/>
+                                    <constraint firstAttribute="width" constant="20" id="ciB-A0-z9v"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="首次2万公里/每2万公里/上浮0.2万公里/下浮0.2万公里" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m07-1V-OE0">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGO-qC-sri">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="jhx-Ix-gbu"/>
+                                    <constraint firstAttribute="width" constant="20" id="qal-Zi-IYt"/>
+                                </constraints>
+                                <state key="normal" image="porsche_icon_trash.png"/>
+                                <connections>
+                                    <action selector="deleteMileageView:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7IN-ZC-mWE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IGO-qC-sri" firstAttribute="leading" secondItem="mns-ky-ndn" secondAttribute="leading" constant="5" id="A7u-LS-nVa"/>
+                            <constraint firstAttribute="bottom" secondItem="m07-1V-OE0" secondAttribute="bottom" id="Bu9-ld-Iqd"/>
+                            <constraint firstItem="m07-1V-OE0" firstAttribute="top" secondItem="mns-ky-ndn" secondAttribute="top" id="EtL-uo-pIc"/>
+                            <constraint firstItem="IGO-qC-sri" firstAttribute="centerY" secondItem="m07-1V-OE0" secondAttribute="centerY" id="Ew7-R4-xNd"/>
+                            <constraint firstAttribute="height" constant="35" id="Kbg-fa-bVz"/>
+                            <constraint firstAttribute="trailing" secondItem="yXB-xd-Luo" secondAttribute="trailing" constant="8" id="Pys-9C-i2e"/>
+                            <constraint firstItem="m07-1V-OE0" firstAttribute="leading" secondItem="IGO-qC-sri" secondAttribute="trailing" constant="5" id="qFy-AG-64s"/>
+                            <constraint firstItem="yXB-xd-Luo" firstAttribute="leading" secondItem="m07-1V-OE0" secondAttribute="trailing" constant="8" id="sh8-HI-Qeo"/>
+                            <constraint firstItem="yXB-xd-Luo" firstAttribute="centerY" secondItem="mns-ky-ndn" secondAttribute="centerY" id="uOy-Sh-G35"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="间隔时间范围：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKz-ad-yWu">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="jP5-yK-0LX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlr-ie-JjR">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="8gA-kV-Yvx"/>
+                            <constraint firstAttribute="width" constant="25" id="z3A-M2-qrK"/>
+                        </constraints>
+                        <state key="normal" image="work_list_26.png"/>
+                        <connections>
+                            <action selector="timerAddAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1H5-gz-wrB"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Efq-Z8-WV4">
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="materialtime_edit_edit.png" translatesAutoresizingMaskIntoConstraints="NO" id="74I-mI-SFn">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="OXn-Hv-yJi"/>
+                                    <constraint firstAttribute="height" constant="20" id="pr0-ew-3Gz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="首次1月/每2个月/上浮3个月/下浮3个月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMY-xT-Skz">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qim-KE-FSa">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="59G-Cp-GJm"/>
+                                    <constraint firstAttribute="height" constant="20" id="dpN-mX-JyC"/>
+                                </constraints>
+                                <state key="normal" image="porsche_icon_trash.png"/>
+                                <connections>
+                                    <action selector="deleteTimeView:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CU0-tH-PkJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="1zg-uB-jeJ"/>
+                            <constraint firstItem="qim-KE-FSa" firstAttribute="centerY" secondItem="bMY-xT-Skz" secondAttribute="centerY" id="3yS-eE-kkT"/>
+                            <constraint firstItem="bMY-xT-Skz" firstAttribute="top" secondItem="Efq-Z8-WV4" secondAttribute="top" id="9uj-sn-80c"/>
+                            <constraint firstItem="bMY-xT-Skz" firstAttribute="leading" secondItem="qim-KE-FSa" secondAttribute="trailing" constant="5" id="KYH-91-7WR"/>
+                            <constraint firstItem="74I-mI-SFn" firstAttribute="leading" secondItem="bMY-xT-Skz" secondAttribute="trailing" constant="8" id="dpj-qz-MnB"/>
+                            <constraint firstAttribute="bottom" secondItem="bMY-xT-Skz" secondAttribute="bottom" id="khL-Fc-Eql"/>
+                            <constraint firstItem="74I-mI-SFn" firstAttribute="centerY" secondItem="Efq-Z8-WV4" secondAttribute="centerY" id="krp-hZ-xSl"/>
+                            <constraint firstItem="qim-KE-FSa" firstAttribute="leading" secondItem="Efq-Z8-WV4" secondAttribute="leading" constant="5" id="lDx-OG-NHl"/>
+                            <constraint firstAttribute="trailing" secondItem="74I-mI-SFn" secondAttribute="trailing" constant="8" id="x31-bw-1Ru"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJT-ja-Fmg">
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="BNs-FQ-VIC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mns-ky-ndn" firstAttribute="top" secondItem="x6L-vm-6rL" secondAttribute="bottom" constant="5" id="2ko-Tj-MVT"/>
+                    <constraint firstItem="JKz-ad-yWu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="3Zg-pZ-VEF"/>
+                    <constraint firstItem="hoz-bf-0MI" firstAttribute="centerY" secondItem="m07-1V-OE0" secondAttribute="centerY" id="3go-PX-uxc"/>
+                    <constraint firstItem="Qlr-ie-JjR" firstAttribute="leading" secondItem="JKz-ad-yWu" secondAttribute="leading" id="7n1-bK-qnj"/>
+                    <constraint firstItem="x6L-vm-6rL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="EUA-SY-7VY"/>
+                    <constraint firstItem="Qlr-ie-JjR" firstAttribute="centerY" secondItem="bMY-xT-Skz" secondAttribute="centerY" id="FHt-K4-yX4"/>
+                    <constraint firstItem="mns-ky-ndn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="IZA-nb-q3m"/>
+                    <constraint firstItem="RJT-ja-Fmg" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Knp-YB-NGx"/>
+                    <constraint firstItem="JKz-ad-yWu" firstAttribute="leading" secondItem="RJT-ja-Fmg" secondAttribute="trailing" constant="25" id="LZQ-Hx-6Kz"/>
+                    <constraint firstItem="Efq-Z8-WV4" firstAttribute="leading" secondItem="JKz-ad-yWu" secondAttribute="leading" id="Nfq-t3-tS8"/>
+                    <constraint firstItem="Efq-Z8-WV4" firstAttribute="top" secondItem="JKz-ad-yWu" secondAttribute="bottom" constant="5" id="VzY-oV-suK"/>
+                    <constraint firstItem="RJT-ja-Fmg" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="c4T-hM-Rl8"/>
+                    <constraint firstItem="RJT-ja-Fmg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dax-dl-O0r"/>
+                    <constraint firstItem="hoz-bf-0MI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="djy-FL-JP2"/>
+                    <constraint firstItem="x6L-vm-6rL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="foW-PH-JI8"/>
+                    <constraint firstItem="RJT-ja-Fmg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="vUJ-Ok-JFe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="editImage2TrailingLayout" destination="dpj-qz-MnB" id="Ph0-tm-iiS"/>
+                <outlet property="editImage2WidthLayout" destination="OXn-Hv-yJi" id="Idv-MS-6Lz"/>
+                <outlet property="editImageTrailingLayout" destination="Pys-9C-i2e" id="0DH-iC-Raa"/>
+                <outlet property="editImageWidthLayout" destination="ciB-A0-z9v" id="BhJ-0B-lMt"/>
+                <outlet property="mileageAddbutton" destination="hoz-bf-0MI" id="otv-lQ-1P9"/>
+                <outlet property="mileageLabel" destination="m07-1V-OE0" id="CBe-Ss-mbS"/>
+                <outlet property="mileageTrashWidthLayout" destination="qal-Zi-IYt" id="Squ-tG-2Nj"/>
+                <outlet property="mileageView" destination="mns-ky-ndn" id="rpz-Cw-BcI"/>
+                <outlet property="timerAddButton" destination="Qlr-ie-JjR" id="UjG-NC-Qpx"/>
+                <outlet property="timerLabel" destination="bMY-xT-Skz" id="J79-ed-OHi"/>
+                <outlet property="timerTranshWidthLayout" destination="59G-Cp-GJm" id="Its-Iq-qvX"/>
+                <outlet property="timerView" destination="Efq-Z8-WV4" id="LUS-X0-lID"/>
+            </connections>
+            <point key="canvasLocation" x="1" y="5.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="materialtime_edit_edit.png" width="31" height="28"/>
+        <image name="porsche_icon_trash.png" width="24" height="25"/>
+        <image name="work_list_26.png" width="36" height="37"/>
+    </resources>
+</document>

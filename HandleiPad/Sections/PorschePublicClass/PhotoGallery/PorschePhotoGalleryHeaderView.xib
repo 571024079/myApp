@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PorschePhotoGalleryHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="751" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="porsche_photoGallery_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="GfF-5X-kuH"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="环车牌照" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1m3-h4-GDp">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Sp3-Pb-OQW"/>
+                        <constraint firstAttribute="width" constant="95" id="c7I-9r-SvF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GfF-5X-kuH" secondAttribute="trailing" constant="50" id="52O-L8-SgR"/>
+                <constraint firstItem="1m3-h4-GDp" firstAttribute="centerY" secondItem="GfF-5X-kuH" secondAttribute="centerY" id="R8h-WS-EZy"/>
+                <constraint firstAttribute="bottom" secondItem="GfF-5X-kuH" secondAttribute="bottom" id="Urj-UO-Ga8"/>
+                <constraint firstItem="GfF-5X-kuH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ayd-5M-0Zw"/>
+                <constraint firstItem="1m3-h4-GDp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hJc-YG-oQ2"/>
+                <constraint firstItem="GfF-5X-kuH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jcv-Mg-OdF"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerLabel" destination="1m3-h4-GDp" id="PHg-aY-G4I"/>
+            </connections>
+            <point key="canvasLocation" x="52.5" y="-8.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="porsche_photoGallery_header.png" width="929" height="36"/>
+    </resources>
+</document>

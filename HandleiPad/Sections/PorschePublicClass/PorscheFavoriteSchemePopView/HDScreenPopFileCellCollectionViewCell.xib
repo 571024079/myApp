@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HDScreenPopFileCellCollectionViewCell" id="gTV-IL-0wX" customClass="HDScreenPopFileCellCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="save_selected.png" translatesAutoresizingMaskIntoConstraints="NO" id="pjL-I5-jbK">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安全" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfn-fc-4hs">
+                        <rect key="frame" x="0.0" y="0.0" width="46" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="91z-Qa-qe0"/>
+                            <constraint firstAttribute="width" constant="46" id="omh-Vr-lHv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhv-rf-Wd2">
+                        <rect key="frame" x="8" y="43" width="104" height="54"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥500.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zl5-HJ-uTd">
+                        <rect key="frame" x="8" y="97" width="104" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="wZG-Mu-pyb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="work_list_31.png" translatesAutoresizingMaskIntoConstraints="NO" id="UKO-cN-5YY">
+                        <rect key="frame" x="95" y="95" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="6aS-wB-Mht"/>
+                            <constraint firstAttribute="height" constant="25" id="yMI-By-Kl3"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="UKO-cN-5YY" secondAttribute="trailing" id="1Hn-o5-lmD"/>
+                <constraint firstItem="Tfn-fc-4hs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2fm-S0-swS"/>
+                <constraint firstAttribute="bottom" secondItem="pjL-I5-jbK" secondAttribute="bottom" id="35G-dQ-kKD"/>
+                <constraint firstItem="Zl5-HJ-uTd" firstAttribute="top" secondItem="mhv-rf-Wd2" secondAttribute="bottom" id="4aS-uq-sS8"/>
+                <constraint firstItem="pjL-I5-jbK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="53g-h1-xht"/>
+                <constraint firstItem="pjL-I5-jbK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Fuw-Rb-uTH"/>
+                <constraint firstAttribute="bottom" secondItem="UKO-cN-5YY" secondAttribute="bottom" id="Hla-lV-nDk"/>
+                <constraint firstItem="Zl5-HJ-uTd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="I49-lc-3nh"/>
+                <constraint firstAttribute="bottom" secondItem="Zl5-HJ-uTd" secondAttribute="bottom" constant="8" id="RJD-qo-lM3"/>
+                <constraint firstItem="mhv-rf-Wd2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="U9a-TS-mfs"/>
+                <constraint firstAttribute="trailing" secondItem="mhv-rf-Wd2" secondAttribute="trailing" constant="8" id="aok-C4-fdK"/>
+                <constraint firstItem="Tfn-fc-4hs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kT4-cf-q8f"/>
+                <constraint firstAttribute="trailing" secondItem="pjL-I5-jbK" secondAttribute="trailing" id="smc-Mf-2Gd"/>
+                <constraint firstAttribute="trailing" secondItem="Zl5-HJ-uTd" secondAttribute="trailing" constant="8" id="vvJ-X3-tMy"/>
+                <constraint firstItem="mhv-rf-Wd2" firstAttribute="top" secondItem="Tfn-fc-4hs" secondAttribute="bottom" constant="8" id="yAI-rf-iLa"/>
+            </constraints>
+            <size key="customSize" width="142" height="136"/>
+            <connections>
+                <outlet property="bgImageView" destination="pjL-I5-jbK" id="XUq-zn-eo6"/>
+                <outlet property="contentLabel" destination="mhv-rf-Wd2" id="SQp-lB-pvl"/>
+                <outlet property="levelLabel" destination="Tfn-fc-4hs" id="ced-40-Yug"/>
+                <outlet property="priceLabel" destination="Zl5-HJ-uTd" id="Bjd-HS-cjS"/>
+                <outlet property="selectedImageView" destination="UKO-cN-5YY" id="Jxd-lh-aZd"/>
+            </connections>
+            <point key="canvasLocation" x="-156" y="-33"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="save_selected.png" width="158" height="148"/>
+        <image name="work_list_31.png" width="28" height="29"/>
+    </resources>
+</document>

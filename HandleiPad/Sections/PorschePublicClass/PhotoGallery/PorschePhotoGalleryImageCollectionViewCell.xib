@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PorschePhotoGalleryImageCollectionViewCell" id="gTV-IL-0wX" customClass="PorschePhotoGalleryImageCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="129"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="184" height="129"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0AL-Zc-Kde">
+                        <rect key="frame" x="0.0" y="0.0" width="184" height="129"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billing_right_play_bt_pic.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xvd-wI-HI7">
+                        <rect key="frame" x="77" y="49" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="3fz-Ld-feL"/>
+                            <constraint firstAttribute="width" constant="30" id="TaI-GB-iAa"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Xvd-wI-HI7" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="A61-bA-RMs"/>
+                <constraint firstItem="0AL-Zc-Kde" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="H73-gS-yUf"/>
+                <constraint firstItem="Xvd-wI-HI7" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Mu7-Dw-GHn"/>
+                <constraint firstAttribute="trailing" secondItem="0AL-Zc-Kde" secondAttribute="trailing" id="dab-fp-gIC"/>
+                <constraint firstItem="0AL-Zc-Kde" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="f0w-mP-atd"/>
+                <constraint firstAttribute="bottom" secondItem="0AL-Zc-Kde" secondAttribute="bottom" id="lQ4-zB-fgO"/>
+            </constraints>
+            <size key="customSize" width="184" height="129"/>
+            <connections>
+                <outlet property="imageView" destination="0AL-Zc-Kde" id="JtT-fn-cKG"/>
+                <outlet property="palyImageView" destination="Xvd-wI-HI7" id="xPc-15-4xJ"/>
+            </connections>
+            <point key="canvasLocation" x="-58" y="-7.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="billing_right_play_bt_pic.png" width="32" height="32"/>
+    </resources>
+</document>

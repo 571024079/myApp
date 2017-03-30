@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FirstBtView">
+            <rect key="frame" x="0.0" y="0.0" width="143" height="252"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rBe-NG-lHs">
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="rBe-NG-lHs" secondAttribute="height" id="Tga-Wi-5Wf"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开单接车" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUo-nK-mQK">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCU-uh-Q2p">
+                    <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="i6o-91-3Dd"/>
+                        <constraint firstAttribute="width" secondItem="WCU-uh-Q2p" secondAttribute="height" id="x8u-A1-xby"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u74-qg-dsQ">
+                    <connections>
+                        <action selector="buttonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="6Yj-ll-33p"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="iUo-nK-mQK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7Bj-o5-b7p"/>
+                <constraint firstAttribute="bottom" secondItem="iUo-nK-mQK" secondAttribute="bottom" id="83Q-rD-mVg"/>
+                <constraint firstAttribute="trailing" secondItem="u74-qg-dsQ" secondAttribute="trailing" id="AMH-YP-QjT"/>
+                <constraint firstItem="u74-qg-dsQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EPR-cD-zA6"/>
+                <constraint firstItem="rBe-NG-lHs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="K5X-2V-bfN"/>
+                <constraint firstItem="WCU-uh-Q2p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-12" id="Rw9-yD-dhf"/>
+                <constraint firstAttribute="bottom" secondItem="u74-qg-dsQ" secondAttribute="bottom" id="UV9-Y8-KzY"/>
+                <constraint firstItem="u74-qg-dsQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a3a-Js-GTJ"/>
+                <constraint firstAttribute="trailing" secondItem="rBe-NG-lHs" secondAttribute="trailing" id="bwl-cB-V3K"/>
+                <constraint firstItem="iUo-nK-mQK" firstAttribute="top" secondItem="rBe-NG-lHs" secondAttribute="bottom" id="fY3-gW-8nq"/>
+                <constraint firstAttribute="trailing" secondItem="iUo-nK-mQK" secondAttribute="trailing" id="k3f-ID-wet"/>
+                <constraint firstItem="rBe-NG-lHs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mji-l4-IuL"/>
+                <constraint firstAttribute="trailing" secondItem="WCU-uh-Q2p" secondAttribute="trailing" constant="-8" id="qw8-In-uoL"/>
+                <constraint firstItem="iUo-nK-mQK" firstAttribute="top" secondItem="rBe-NG-lHs" secondAttribute="bottom" id="stw-nY-WQ0"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="stw-nY-WQ0"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="button" destination="u74-qg-dsQ" id="NUv-lI-ush"/>
+                <outlet property="imageView" destination="rBe-NG-lHs" id="H8p-Sv-te7"/>
+                <outlet property="label" destination="iUo-nK-mQK" id="npf-Mr-rsC"/>
+                <outlet property="numLb" destination="WCU-uh-Q2p" id="GMo-La-gBU"/>
+            </connections>
+            <point key="canvasLocation" x="112.5" y="219"/>
+        </view>
+    </objects>
+</document>

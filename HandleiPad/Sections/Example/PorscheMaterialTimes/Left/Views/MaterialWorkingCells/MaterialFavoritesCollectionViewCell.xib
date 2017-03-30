@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MaterialFavoritesCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="426" height="420"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="426" height="420"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBQ-aD-eFQ">
+                        <rect key="frame" x="0.0" y="0.0" width="426" height="420"/>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="tickAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="haS-Vc-eCg"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YD0-2Z-fIg">
+                        <rect key="frame" x="30" y="10" width="396" height="380"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ddL-Oz-VkU">
+                                <rect key="frame" x="0.0" y="0.0" width="396" height="380"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JtW-Dh-gMG">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <connections>
+                                    <outlet property="dataSource" destination="gTV-IL-0wX" id="zDF-Q4-cxr"/>
+                                    <outlet property="delegate" destination="gTV-IL-0wX" id="JxF-2E-ucr"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ddL-Oz-VkU" secondAttribute="bottom" id="HcF-lb-WFL"/>
+                            <constraint firstAttribute="trailing" secondItem="ddL-Oz-VkU" secondAttribute="trailing" id="OJ8-8s-6cI"/>
+                            <constraint firstItem="ddL-Oz-VkU" firstAttribute="top" secondItem="YD0-2Z-fIg" secondAttribute="top" id="Vuq-dW-B9s"/>
+                            <constraint firstItem="ddL-Oz-VkU" firstAttribute="leading" secondItem="YD0-2Z-fIg" secondAttribute="leading" id="rmj-zd-P3K"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVT-k0-wEF">
+                        <rect key="frame" x="2" y="12" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="PAH-Ed-T7c"/>
+                            <constraint firstAttribute="height" constant="16" id="jKY-tI-hH0"/>
+                        </constraints>
+                        <state key="normal" image="materialtime_list_checkbox_normal.png"/>
+                        <connections>
+                            <action selector="tickAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="hCq-TS-hWf"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="常用" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYR-DR-vC5">
+                        <rect key="frame" x="30" y="390" width="396" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xBQ-aD-eFQ" secondAttribute="bottom" id="0V7-xA-JPh"/>
+                <constraint firstAttribute="trailing" secondItem="uYR-DR-vC5" secondAttribute="trailing" id="6cp-BA-XGr"/>
+                <constraint firstItem="YD0-2Z-fIg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="9XV-4K-tPe"/>
+                <constraint firstAttribute="bottom" secondItem="uYR-DR-vC5" secondAttribute="bottom" id="GdD-Nd-uAe"/>
+                <constraint firstItem="uYR-DR-vC5" firstAttribute="top" secondItem="YD0-2Z-fIg" secondAttribute="bottom" id="HtG-bS-eI5"/>
+                <constraint firstItem="YD0-2Z-fIg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="Q0V-vC-F2g"/>
+                <constraint firstItem="uYR-DR-vC5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="Tgo-jO-oA6"/>
+                <constraint firstItem="xVT-k0-wEF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="V3e-ny-4Bm"/>
+                <constraint firstItem="xBQ-aD-eFQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WGP-vZ-Qog"/>
+                <constraint firstItem="xVT-k0-wEF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="glj-5g-cDc"/>
+                <constraint firstAttribute="trailing" secondItem="YD0-2Z-fIg" secondAttribute="trailing" id="iyr-oR-Rw0"/>
+                <constraint firstItem="xBQ-aD-eFQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mv7-Mu-GJi"/>
+                <constraint firstAttribute="trailing" secondItem="xBQ-aD-eFQ" secondAttribute="trailing" id="pJy-AZ-aSc"/>
+                <constraint firstAttribute="bottom" secondItem="YD0-2Z-fIg" secondAttribute="bottom" constant="30" id="vZh-Ng-HgF"/>
+            </constraints>
+            <size key="customSize" width="426" height="420"/>
+            <connections>
+                <outlet property="borderView" destination="YD0-2Z-fIg" id="7Y5-Nz-dC0"/>
+                <outlet property="collectionView" destination="ddL-Oz-VkU" id="bLO-T5-jnY"/>
+                <outlet property="tickButton" destination="xVT-k0-wEF" id="zal-Hm-FdE"/>
+                <outlet property="titleLabel" destination="uYR-DR-vC5" id="ZBf-LI-L7Y"/>
+            </connections>
+            <point key="canvasLocation" x="-52" y="-16"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="materialtime_list_checkbox_normal.png" width="30" height="30"/>
+    </resources>
+</document>

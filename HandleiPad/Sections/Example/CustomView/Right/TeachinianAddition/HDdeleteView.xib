@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HDdeleteView">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="205"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="确定删除?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx5-j9-OAk">
+                    <rect key="frame" x="0.0" y="0.0" width="371" height="154"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aj1-pV-AMV">
+                    <rect key="frame" x="0.0" y="154" width="371" height="51"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJi-yB-50X">
+                            <rect key="frame" x="0.0" y="0.0" width="119.5" height="51"/>
+                            <state key="normal" title="确定" backgroundImage="sure_bg_blue.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="sureBtAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="0de-D4-0HF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhm-39-kFO">
+                            <rect key="frame" x="119.5" y="1" width="132" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="132" id="OnK-S6-xNO"/>
+                            </constraints>
+                            <state key="normal" title="拒绝">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="refuseBtAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="ak4-o6-3Zk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efC-LJ-pUy">
+                            <rect key="frame" x="252.5" y="1" width="118.5" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelBtAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="64s-eo-t4v"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="efC-LJ-pUy" firstAttribute="leading" secondItem="Qhm-39-kFO" secondAttribute="trailing" constant="1" id="1mf-8E-Lqd"/>
+                        <constraint firstAttribute="trailing" secondItem="efC-LJ-pUy" secondAttribute="trailing" id="7e2-gt-4iJ"/>
+                        <constraint firstAttribute="bottom" secondItem="Qhm-39-kFO" secondAttribute="bottom" id="AWH-KI-yzt"/>
+                        <constraint firstAttribute="bottom" secondItem="dJi-yB-50X" secondAttribute="bottom" id="But-z0-JNG"/>
+                        <constraint firstItem="efC-LJ-pUy" firstAttribute="top" secondItem="Aj1-pV-AMV" secondAttribute="top" constant="1" id="MFA-Kg-LLv"/>
+                        <constraint firstItem="Qhm-39-kFO" firstAttribute="centerX" secondItem="Aj1-pV-AMV" secondAttribute="centerX" id="Pfy-JI-KrG"/>
+                        <constraint firstItem="Qhm-39-kFO" firstAttribute="leading" secondItem="dJi-yB-50X" secondAttribute="trailing" id="Yj1-EE-ERj"/>
+                        <constraint firstItem="dJi-yB-50X" firstAttribute="leading" secondItem="Aj1-pV-AMV" secondAttribute="leading" id="ks8-56-Gvq"/>
+                        <constraint firstItem="dJi-yB-50X" firstAttribute="top" secondItem="Aj1-pV-AMV" secondAttribute="top" id="vge-GS-UdD"/>
+                        <constraint firstAttribute="bottom" secondItem="efC-LJ-pUy" secondAttribute="bottom" id="w7P-HQ-Nv5"/>
+                        <constraint firstItem="Qhm-39-kFO" firstAttribute="top" secondItem="Aj1-pV-AMV" secondAttribute="top" constant="1" id="zas-Bd-lKJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Aj1-pV-AMV" secondAttribute="trailing" id="3Xo-iX-Vkf"/>
+                <constraint firstItem="gx5-j9-OAk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8HD-7T-vUq"/>
+                <constraint firstItem="Aj1-pV-AMV" firstAttribute="top" secondItem="gx5-j9-OAk" secondAttribute="bottom" id="8TE-T9-f7W"/>
+                <constraint firstItem="gx5-j9-OAk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N24-Iy-tNl"/>
+                <constraint firstAttribute="trailing" secondItem="gx5-j9-OAk" secondAttribute="trailing" id="Q8A-an-4Kp"/>
+                <constraint firstItem="Aj1-pV-AMV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZvX-D8-9FL"/>
+                <constraint firstItem="gx5-j9-OAk" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="3/4" id="nrn-be-b5M"/>
+                <constraint firstAttribute="bottom" secondItem="Aj1-pV-AMV" secondAttribute="bottom" id="wAG-wk-n6J"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelBt" destination="efC-LJ-pUy" id="eTB-0N-3PV"/>
+                <outlet property="deleteLb" destination="gx5-j9-OAk" id="726-Pd-cet"/>
+                <outlet property="hiddenBt" destination="Qhm-39-kFO" id="Xb5-2X-KaC"/>
+                <outlet property="refuseBtWidth" destination="OnK-S6-xNO" id="JIG-aB-5Us"/>
+                <outlet property="sureBt" destination="dJi-yB-50X" id="uBd-XE-4VB"/>
+            </connections>
+            <point key="canvasLocation" x="11.5" y="-243.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="sure_bg_blue.png" width="658" height="182"/>
+    </resources>
+</document>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemDetialLeftBottomView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3SM-zx-jEk" customClass="ItemDetialLeftBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="373" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haV-da-UoZ">
+                    <rect key="frame" x="186.5" y="1" width="186.5" height="48"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="自定义项目">
+                        <color key="titleColor" red="0.16862745098039217" green="0.30196078431372547" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="addSingleItemBtAction:" destination="3SM-zx-jEk" eventType="touchUpInside" id="uhl-yf-S9N"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z24-vH-VK2">
+                    <rect key="frame" x="0.0" y="1" width="185.5" height="48"/>
+                    <state key="normal" title="全屏" backgroundImage="sure_bg_blue.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="fullScreenBtAction:" destination="3SM-zx-jEk" eventType="touchUpInside" id="4jn-39-JRb"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Rg-ZO-BxN">
+                    <rect key="frame" x="373" y="0.0" width="0.0" height="49"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7Rg-ZO-BxN" firstAttribute="top" secondItem="3SM-zx-jEk" secondAttribute="top" id="4Wm-sY-DeL"/>
+                <constraint firstAttribute="bottom" secondItem="Z24-vH-VK2" secondAttribute="bottom" id="AkD-sh-kds"/>
+                <constraint firstItem="haV-da-UoZ" firstAttribute="leading" secondItem="3SM-zx-jEk" secondAttribute="leading" id="Bz6-On-Cjd"/>
+                <constraint firstItem="Z24-vH-VK2" firstAttribute="top" secondItem="3SM-zx-jEk" secondAttribute="top" constant="1" id="GEy-E8-WWc"/>
+                <constraint firstItem="haV-da-UoZ" firstAttribute="width" secondItem="3SM-zx-jEk" secondAttribute="width" multiplier="1/2" id="Ni4-40-0fy"/>
+                <constraint firstAttribute="trailing" secondItem="Z24-vH-VK2" secondAttribute="trailing" id="QX3-pz-Rur"/>
+                <constraint firstAttribute="trailing" secondItem="7Rg-ZO-BxN" secondAttribute="trailing" id="cv1-jh-RMo"/>
+                <constraint firstAttribute="trailing" secondItem="haV-da-UoZ" secondAttribute="trailing" id="g9c-RZ-5RC"/>
+                <constraint firstItem="haV-da-UoZ" firstAttribute="top" secondItem="3SM-zx-jEk" secondAttribute="top" constant="1" id="gZ4-rt-lCl"/>
+                <constraint firstItem="Z24-vH-VK2" firstAttribute="leading" secondItem="3SM-zx-jEk" secondAttribute="leading" id="oGX-vX-Mm2"/>
+                <constraint firstAttribute="bottom" secondItem="7Rg-ZO-BxN" secondAttribute="bottom" id="pS4-vk-AJW"/>
+                <constraint firstItem="7Rg-ZO-BxN" firstAttribute="leading" secondItem="haV-da-UoZ" secondAttribute="trailing" id="x6P-jJ-2mW"/>
+                <constraint firstItem="Z24-vH-VK2" firstAttribute="width" secondItem="3SM-zx-jEk" secondAttribute="width" multiplier="1/2" constant="-1" id="xMr-AC-0I8"/>
+                <constraint firstAttribute="bottom" secondItem="haV-da-UoZ" secondAttribute="bottom" id="yXV-od-Wya"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="QX3-pz-Rur"/>
+                    <exclude reference="Bz6-On-Cjd"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="addSingleItemBt" destination="haV-da-UoZ" id="KqM-q7-pAs"/>
+                <outlet property="fullSrcreenBt" destination="Z24-vH-VK2" id="IQo-5m-Tuv"/>
+            </connections>
+            <point key="canvasLocation" x="545" y="405"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="sure_bg_blue.png" width="658" height="182"/>
+    </resources>
+</document>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProjectTabbarView">
+            <rect key="frame" x="0.0" y="0.0" width="389" height="31"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFP-IH-Qju">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="T2P-cP-fBT"/>
+                        <constraint firstAttribute="height" constant="23" id="s7x-hE-wWS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="厂方" backgroundImage="hd_work_list_clean.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="switchLocationBtAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="fml-S9-MrQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIm-mR-pfb">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="hnY-Ue-Cjn"/>
+                        <constraint firstAttribute="height" constant="23" id="xEZ-9V-HCW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="本店">
+                        <color key="titleColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="switchLocationBtAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="ZCw-d8-TJh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJZ-Dd-vJ3">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="PCA-eV-1qq"/>
+                        <constraint firstAttribute="width" constant="60" id="gkb-uc-c9X"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="我的">
+                        <color key="titleColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="switchLocationBtAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="8fj-Q2-COk"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNb-CK-tpV">
+                    <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="aHg-dg-Kco"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fFP-IH-Qju" secondAttribute="bottom" id="8Hz-fL-8Hg"/>
+                <constraint firstAttribute="trailing" secondItem="hNb-CK-tpV" secondAttribute="trailing" id="FAz-YW-TPR"/>
+                <constraint firstAttribute="bottom" secondItem="hNb-CK-tpV" secondAttribute="bottom" id="HW7-3x-9zo"/>
+                <constraint firstAttribute="bottom" secondItem="HIm-mR-pfb" secondAttribute="bottom" id="Szx-yv-9b0"/>
+                <constraint firstItem="HIm-mR-pfb" firstAttribute="leading" secondItem="fFP-IH-Qju" secondAttribute="trailing" constant="-1" id="awZ-4d-SQv"/>
+                <constraint firstItem="SJZ-Dd-vJ3" firstAttribute="leading" secondItem="HIm-mR-pfb" secondAttribute="trailing" constant="-1" id="gCc-FD-NG4"/>
+                <constraint firstItem="hNb-CK-tpV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oTE-9s-8o4"/>
+                <constraint firstItem="fFP-IH-Qju" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="pSD-ui-9Vp"/>
+                <constraint firstAttribute="bottom" secondItem="SJZ-Dd-vJ3" secondAttribute="bottom" id="z7g-2P-CfP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="factoryBt" destination="fFP-IH-Qju" id="Y2l-DZ-9RB"/>
+                <outlet property="locationBt" destination="HIm-mR-pfb" id="Ach-Du-0CT"/>
+                <outlet property="mineBt" destination="SJZ-Dd-vJ3" id="k2K-bG-Zda"/>
+            </connections>
+            <point key="canvasLocation" x="115.5" y="-236.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hd_work_list_clean.png" width="420" height="120"/>
+    </resources>
+</document>

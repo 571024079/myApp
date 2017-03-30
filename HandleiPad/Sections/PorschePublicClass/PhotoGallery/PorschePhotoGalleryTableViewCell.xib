@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PorschePhotoGalleryTableViewCell" rowHeight="147" id="KGk-i7-Jjw" customClass="PorschePhotoGalleryTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="612" height="147"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="612" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lmQ-CI-f6g">
+                        <rect key="frame" x="0.0" y="40" width="105" height="75"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="105" id="BvW-b6-EBX"/>
+                            <constraint firstAttribute="height" constant="75" id="gq8-DK-nrN"/>
+                        </constraints>
+                    </imageView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="h4U-C0-Kyl">
+                        <rect key="frame" x="120" y="32.5" width="442" height="90"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="TzD-Il-Fed"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vmw-lp-Kdm">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="4i4-cr-ZtN"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="3h1-kK-abl"/>
+                        </connections>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="① 更换左右刹车片" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1av-GZ-GZK">
+                        <rect key="frame" x="0.0" y="10" width="612" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="ls6-CH-fxv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKB-L0-qpK">
+                        <rect key="frame" x="577" y="32.5" width="20" height="90"/>
+                        <state key="normal" image="hd_item_detial_project.png"/>
+                        <connections>
+                            <action selector="nextImageAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cp5-8N-cvh"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billing_camera_pic.png" translatesAutoresizingMaskIntoConstraints="NO" id="gkk-rV-mdu">
+                        <rect key="frame" x="37.5" y="62.5" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="PLh-VK-vdG"/>
+                            <constraint firstAttribute="width" constant="30" id="Rcj-bs-eWR"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L57-Xu-VAG">
+                        <rect key="frame" x="0.0" y="40" width="105" height="75"/>
+                        <connections>
+                            <action selector="playAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Xux-eK-LfE"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L57-Xu-VAG" firstAttribute="centerY" secondItem="lmQ-CI-f6g" secondAttribute="centerY" id="2M2-9N-AI5"/>
+                    <constraint firstAttribute="trailing" secondItem="BKB-L0-qpK" secondAttribute="trailing" constant="15" id="2h9-Q2-wJ2"/>
+                    <constraint firstItem="L57-Xu-VAG" firstAttribute="width" secondItem="lmQ-CI-f6g" secondAttribute="width" id="5B8-82-Bk8"/>
+                    <constraint firstItem="BKB-L0-qpK" firstAttribute="height" secondItem="h4U-C0-Kyl" secondAttribute="height" id="6Rq-Br-SdL"/>
+                    <constraint firstItem="gkk-rV-mdu" firstAttribute="centerY" secondItem="lmQ-CI-f6g" secondAttribute="centerY" id="96M-lo-wrX"/>
+                    <constraint firstItem="lmQ-CI-f6g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9hy-Er-D36"/>
+                    <constraint firstItem="BKB-L0-qpK" firstAttribute="leading" secondItem="h4U-C0-Kyl" secondAttribute="trailing" constant="15" id="AIY-Jb-hNW"/>
+                    <constraint firstItem="h4U-C0-Kyl" firstAttribute="centerY" secondItem="lmQ-CI-f6g" secondAttribute="centerY" id="C7J-2F-VNH"/>
+                    <constraint firstAttribute="trailing" secondItem="h4U-C0-Kyl" secondAttribute="trailing" constant="50" id="Htk-uG-88l"/>
+                    <constraint firstItem="L57-Xu-VAG" firstAttribute="centerX" secondItem="lmQ-CI-f6g" secondAttribute="centerX" id="ObU-o0-T1T"/>
+                    <constraint firstItem="lmQ-CI-f6g" firstAttribute="top" secondItem="1av-GZ-GZK" secondAttribute="bottom" constant="10" id="ROo-4a-xzp"/>
+                    <constraint firstItem="L57-Xu-VAG" firstAttribute="height" secondItem="lmQ-CI-f6g" secondAttribute="height" id="VRq-vX-FLj"/>
+                    <constraint firstItem="gkk-rV-mdu" firstAttribute="centerX" secondItem="lmQ-CI-f6g" secondAttribute="centerX" id="ccd-xE-ATH"/>
+                    <constraint firstAttribute="trailing" secondItem="1av-GZ-GZK" secondAttribute="trailing" id="dnt-Um-fR0"/>
+                    <constraint firstItem="1av-GZ-GZK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gSA-OE-etF"/>
+                    <constraint firstItem="BKB-L0-qpK" firstAttribute="centerY" secondItem="h4U-C0-Kyl" secondAttribute="centerY" id="jQA-qW-pDR"/>
+                    <constraint firstItem="1av-GZ-GZK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pMI-FS-TbQ"/>
+                    <constraint firstItem="h4U-C0-Kyl" firstAttribute="leading" secondItem="lmQ-CI-f6g" secondAttribute="trailing" constant="15" id="wr6-8O-RfG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="h4U-C0-Kyl" id="5Zz-eV-JzT"/>
+                <outlet property="collectionViewLeftLayoutConstraint" destination="wr6-8O-RfG" id="gHx-LU-ImV"/>
+                <outlet property="firstImageView" destination="lmQ-CI-f6g" id="v4O-gk-l2A"/>
+                <outlet property="firstPlaceholderImageView" destination="gkk-rV-mdu" id="pzH-cN-svF"/>
+                <outlet property="nextButton" destination="BKB-L0-qpK" id="b62-NI-Xsh"/>
+                <outlet property="takPhotoButton" destination="L57-Xu-VAG" id="LUH-bL-6f9"/>
+                <outlet property="titleLabel" destination="1av-GZ-GZK" id="Roi-2p-2S9"/>
+                <outlet property="titleLabelHeightLayout" destination="ls6-CH-fxv" id="YgI-iV-W8w"/>
+                <outlet property="titleTopLayout" destination="pMI-FS-TbQ" id="eq1-4s-Vmh"/>
+            </connections>
+            <point key="canvasLocation" x="51" y="-115.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="billing_camera_pic.png" width="35" height="32"/>
+        <image name="hd_item_detial_project.png" width="39" height="66"/>
+    </resources>
+</document>

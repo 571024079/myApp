@@ -1,0 +1,293 @@
+//
+//  PrefixHeader.pch
+//  HandleiPad
+//
+//  Created by Handlecar1 on 16/9/6.
+//  Copyright © 2016年 Handlecar1. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "HDOrangeModel.h" //程凯的model等待整合
+
+#import "AlertViewHelpers.h"
+#import "HDStatusChangeManager.h"
+
+#import "PorscheType.h"
+#import "NSDate+HD.h" //日期格式化工具
+#import "NSString+Additional.h"
+#import "NSString+moneyFormatter.h" //金钱格式化工具
+#import "PorscheCustomView.h" //Robin的自定义View库
+#import "PorscheNumericKeyboard.h" //数字键盘
+#import "PorscheCarModel.h"//数据model
+#import "PorscheImageManager.h"//获取图片的manager
+#import "UILabel+JustfyLabel.h" //label两端对齐的方法
+#import "PAPI_URLDefine.h"
+#import "NSMutableDictionary+HSSafeSetter.h"
+#import "HDStoreInfoManager.h"//登录单例参数
+#import "PHTTPRequestSender.h"//请求助手
+#import "MBProgressHUD+PorscheHUD.h" //动画加载框
+#import "PorscheRequestManager.h" //保时捷接口请求管理类
+#import "YYModel.h" //model解析类
+#import "PorscheUserTool.h" //做用户账号缓存
+#import "PorscheModel.h" //接口model
+#import "PorscheMultipleListhView.h" //list选择框
+#import "MJRefresh.h"//MJ刷新
+#import "NSString+Regular.h" //正则判断
+#import "UITextField+Regular.h" //输入框方法
+#import "UIImageView+WebCache.h"
+#import "PorscheConstant.h" //常量单利
+#import "UIImageView+CircleStyleAndColor.h"//实心圆，点心圈，空心圈图片
+#import "CoreDataManager.h"     // 本地缓存类
+#import "PorscheCarSeriesModel.h"  // 车系 车型 年款
+#import "UIButton+Permission.h" //权限按钮
+#import "HDFileHelper.h"
+#import "HDSchemewsView.h"//工时备件弹窗
+#import "HDUtil.h"
+
+#define IOS10_OR_LATER [[UIDevice currentDevice].systemVersion floatValue] >= 10.0
+
+#define HD_WIDTH [UIScreen mainScreen].bounds.size.width
+
+#define HD_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define HD_FULLView [UIApplication sharedApplication].keyWindow.rootViewController.view
+#define HD_FULLViewController [UIApplication sharedApplication].keyWindow.rootViewController
+#define HD_KEYWINDOW  [UIApplication sharedApplication].keyWindow
+
+
+#define LEFT_WITH 364
+//单例
+#define HD_SINGLETON_IMPL(class) \
+static class* gInstance = nil; \
++ (class*)sharedInstance { \
+if (!gInstance) { \
+@synchronized(self) { \
+if (!gInstance) gInstance = [[self alloc] init]; \
+} \
+} \
+return gInstance; \
+}
+//单例销毁
+#define HD_SINGLETON_DESTORY() \
++ (void)destorySharedInstance\
+{\
+gInstance = nil;\
+}
+
+#define WeakObject(o) __weak typeof(o) o##Weak = o;
+#define StrongObject(o) __strong typeof(o) o##Strong = o;
+
+#define NULLString(string) ((![string isKindOfClass:[NSString class]])||[string isEqualToString:@""] || (string == nil) || [string isEqualToString:@""] || [string isKindOfClass:[NSNull class]]||[[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0)
+
+#ifndef __OPTIMIZE__
+#define NSLog(format, ...) printf("class: <time:%f %p %s:(%d) > method: %s \n%s\n",CFAbsoluteTimeGetCurrent(), self, [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] )
+#else
+#define NSLog(format, ...)
+#endif
+
+//#define DLog(format, ...) printf("class: <%p %s:(%d) > method: %s \n%s\n", self, [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] )
+
+//主调红
+#define MAIN_RED ColorHex(0x990000)
+//主调蓝
+#define MAIN_BLUE ColorHex(0x2B4D70)
+//库内预选颜色
+#define MAIN_BEFOR_BLUE Color(238, 246, 251)
+//主要TF的默认字颜色
+#define MAIN_PLACEHOLDER_GRAY ColorHex(0x777777)
+//开始编辑TF淡化颜色
+#define MAIN_ATTRIBUTED_GRAY Color(200, 200, 200)
+
+#define KEY_WINDOW [UIApplication sharedApplication].keyWindow
+#define Color(r,g,b) [UIColor colorWithRed:r /255.0 green:g / 255.0 blue:b / 255.0 alpha:1]
+
+#define ColorHex(hexColor) [UIColor colorWithRed:(float)((hexColor & 0xFF0000) >> 16)/255.0f green:(float)((hexColor & 0x00FF00) >> 8)/255.0f blue:(float)(hexColor & 0x0000FF)/255.0f alpha:1.0f]
+//删除弹窗的size
+#define DELETE_VIEW_SIZE CGSizeMake(395, 200)
+
+#define RANDOM_COLOR [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0]
+
+#define MAIN_SCREEN_FRAME   [[UIScreen mainScreen] bounds]
+
+#define PRECHECK_BORDER_COLOR [UIColor lightGrayColor]
+//---------------------------------------通知宏----------------------
+//#define CHANGE_HEADER_BUTTON_TEXT_COLOR                                    @"changeheadertextnotifination"
+
+
+//--------------------------------------开单信息---------------------
+//#define BILLING_CAR_MESSAGE_NOTIFINATION                                    @"billingcarmessagenotifination"
+//新开单，获取增项单号
+//#define NEW_BILLING_CAR_NOTIFINAITON                                        @"newcarbillingnotifination"
+//新开单，实时保存信息，左侧实时拉取信息。传递参数0.删除工单 刷新在厂车辆实时数据，1刷新在厂车辆现有数据
+//#define NEW_BILLING_CAR_SAVE_NOTIFINATION                                   @"newbillingcarsavenotifination"
+//--------------------------------------开单信息---------------------
+//新建工单，方案库重新刷新数据《死数据》
+//#define SET_UP_NEWLIST_NOTIFINATION                                         @"setupnewlistnotifination"
+//获取全屏信号
+//#define   MAIN_SCREEN_NOTIFINATION                                          @"changerootviewcontroller"
+//进入拍摄界面
+//#define STEP_TO_CAMERAVC_NOTIFINATION                                       @"showCameraVC"
+//返回首页
+//#define BACK_TO_FIRSTVC_NOTIFINATION                                        @"billingBackToFirstView"
+//base收键盘
+//#define HIDDEN_KEYBOARD_NOTIFINATION                                      @"baseHiddenKeyBoard"
+
+//更改右边接车流程信号
+//#define CHANGE_RIGHT_STEP_NOTIFINATION                                      @"rightchangeBtAction"
+//工单左侧方案库 刷新信号
+//#define WORK_ORDER_LEFT_REFRESH_MORE_NOTIFINATION                           @"workorderleftrefreshmorenotifination"
+/*
+//进入备件和工时弹窗信号
+#define STEP_TO_MATERIAL_AND_ITEM_TIME_NOTIFINATION                         @"stepMaterialCubVC"
+ */
+//备件库工时库返回按钮
+//#define BACK_FROM_MATERIAL_AND_ITEM_TIME_NOTIFINATION                       @"materialBackToTechnianVC"
+//右侧 保存或者编辑 工单时信号
+//#define RIGHT_SAVE_LIST_NOTIFINATION                                        @"rightsavelistnotifination"
+//保存编辑工单
+//#define WORK_ORDER_SAVE_AND_EDIT_NOTIFINATION                             @"workordersaveandeditnotifination"
+
+//技师增项已选项目信号
+//#define TECHICIANADDITION_SELECTED_NOTIFINATION                             @"setSelectItemCount"
+//技师增项添加项目
+//#define TECHICIANADDITION_ADD_ITEM_NOTIFINATION                             @"addModel"
+//获取工单方案后 刷新左侧方案库，显示已选择标记
+//#define WORK_ORDER_REFRESH_LEFT_ITEM_NOTIFINATION                          @"WORK_ORDER_REFRESH_LEFT_ITEM_NOTIFINATION"
+//收藏夹 添加方案
+//#define COLLECTION_ADD_ITEM_NOTIFINATION                                    @"addleftmodel"
+//方案库 拖动方案时滚动视图 信号
+//#define PROJECT_SCROLL_TABLEVIEW_NOTIFINATION                               @"lefttableViewscroll"
+//改变方案库 方案的分类<安全，隐患，信息，自定义....>
+//#define PROJECT_CHANGE_ITEM_CATEGORY_NOTIFINATION                           @"changeCatrgory"
+//方案库 拖动方案至按钮位置时 左右滚动信号
+//#define PROJECT_SCROLL_COLLECTIONVIEW_NOTIFINATION                          @"scrollCollectionCell"
+//在厂车辆全屏通知
+//#define FULLSCREEN_LEFTLIST_NOTIFINATION                                    @"fullScreenLeftList"
+//在长车辆全屏联动右侧通知
+//#define FULLSCREEN_LESTLIST_RIGHTSCROLL_NOTIFINATION                        @"fullListWithRightScroll"
+//在长车辆全屏联动左侧通知
+//#define FULLSCREEN_LESTLIST_LEFTSCROLL_NOTIFINATION                         @"fullListWithLeftScroll"
+//在厂车辆全屏右侧通知左侧进行数据请求
+//#define FULLSCREEN_LESTLIST_RIGHTSELECTSTATUS_NOTIFINATION                  @"fullListWithRightSelectStatus"
+//在厂车辆全屏左侧将请求的数据传递改右侧
+//#define FULLSCREEN_LEFTLIST_LEFTDATASOURCE_NOTIFINATION                     @"fullListWithLeftDataSource"
+//给右侧添加通知，当右侧点击确认返回的时候，执行方法，还原界面
+//#define FULLSCREEN_LEFTLIST_ACTIONWITHRIGHTVIEW_NOTIFITION                  @"fullListActionWithRightView"
+//选中车辆的服务提醒信号
+//#define SINGLE_CAR_NOTIFICATION                                             @"singleCarNotifination"
+
+//显示打印预览页面
+//#define SHOW_PREVIEW_NOTIFICATION                                           @"SHOW_PREVIEW_NOTIFICATION"
+
+//服务档案左侧数据传递
+//#define SERVICE_LEFT_DETAIL_DATASOURCE_NOTIFINATION                         @"serviceLeftCellDetailDataSource"
+//服务档案左侧接受右侧的数据
+//#define SERVICERECORDS_RIGHTTOLEFT_DATA_NOTIFINATION                        @"serviceRecordsRightToLeftData"
+
+//登录之后 获取任务提醒
+#define NOTICE_MESSAGE_AFTER_LOGINED_NOTIFINATION                           @"NOTICE_MESSAGE_AFTER_LOGINED_NOTIFINATION"
+//方案库 工时库 备件库 左侧筛选通知
+#define PORSCHE_LEFT_REQUEST_NOTIFICATION                                   @"porscheLeftRequestNotification"
+
+//方案库级别分类通知
+#define SCHEME_LEFT_LEVEL_NOTIFICATION                                      @"schemeLeftLevelNotification"
+//方案库cell移动通知
+#define SCHEME_LEFT_MOVERECTCELL_NOTIFICATION                               @"schemeLeftMoveRectCellNotification"
+//方案收藏夹刷新外部数据通知（毛玻璃，移动、删除位置）
+#define SCHEME_LEFT_EDITFAVORITE                                            @"schemeLeftEditFavoriteNotification"
+//方案收藏夹新建通知
+#define SCHEME_LEFT_CREATENEWFAVORITE                                       @"schemeLeftCreateNewFavoriteNotification"
+//方案左侧-已添加项目-提示信号
+//#define ADDED_ITEM_NOTIFINATION                                             @"addedItemNotifination"
+
+// 进入照片库
+#define INTO_PHOTOLIBRARY_NOTIFICATION                                      @"IntoPhotoLibrary"
+#define EXIT_PHOTOLIBRARY_NOTIFICATION                                      @"ExitPhotoLibrary"
+
+// 刷新图片浏览器
+#define RELOAD_PHOTOBROWSER_NOTIFICATION                                    @"reloadPhoto"
+
+//方案详情修改备件工时价格后刷新总价格通知
+#define SCHEME_RIGHT_RELOADPRICE_NOTIFICATION                               @"schemeRightDetailReloadPriceNotification"
+
+//方案、备件、工时页面选中收藏夹筛选
+#define SCHEME_LEFT_SEARCHFAVORITE_NOTIFICATION                             @"schemeLeftSearchFavoriteNotification"
+
+//方案、备件、工时页面选择条件改变的时候通知
+#define SCHEME_LEFT_SEARCH_NOTIFICATION                                     @"schemeLeftSearchNotification"
+
+//方案详情里面修改方案所在收藏夹通知左侧我的收藏夹刷新数据
+#define SCHEME_DETAIL_REFRESH_MYFAVORITE_NOTIFICATION                       @"schemeDetailRefreshMyFavoriteNotification"
+
+//获取工单实时状态
+#define WORK_ORDER_CURRENT_STATUS_NOTIFINATION                              @"/increaseitem/orderoptstats"
+//获取提醒数量信息
+#define WORK_ORDER_NOTICE_NOTIFINATION                                      @"/remindtask/msgCount"
+//---------------------  网址列表  ------------------
+// 选择链接
+#define WEB_URL_TAP_NOTIFICATION                                            @"WEB_URL_TAP_NOTIFICATION"
+
+// 网页消失
+#define WEBLIST_DISAPPEAR_NOTIFICATION              @"WEBLIST_DISAPPEAR_NOTIFICATION"
+
+// placeholder
+#define PlaceHolderImageNormalName                                              @"photo_placeholder.png"
+#define PlaceHolderSmallImageName                                               @"photo_placeholder.png"// @"photo_smallplaceholder.png"
+
+#define  CoreDataVersion            @"VERSIONLIST"                  // 版本列表
+#define  CoreDataBusinesstype       @"HC_BASIC_BUSINESSTYPE"        // 业务类型
+#define  CoreDataCancelReason       @"HC_BASIC_CANCELREASON"        // 取消原因列表
+#define  CoreDataInsuranceCompany   @"HC_BASIC_INSURANCECOMPANY"    // 保险公司列表
+#define  CoreDataURL                @"HC_BASIC_URL"                 // 网页链接列表
+#define  CoreDataCommonValue        @"HC_COMMON_VALUE"              // 常量
+#define  CoreDataDepartment         @"HC_STORE_DEPARTMENT"          // 部门列表
+#define  CoreDataGroup              @"HC_STORE_GROUP"               // 组列表
+#define  CoreDataPosition           @"HC_STORE_POSITION"            // 职位列表
+#define  CoreDataPartsGroup         @"HC_PARTS_GROUP"               // 备件主组
+#define  CoreDataWorkHourk          @"HC_WORK_HOUR_GROUP"           // 工时列表
+#define  CoreDataSchemeLevel        @"FAJB"                         // 方案级别列表
+#define  CoreDataPayWay             @"JSFS"                         // 结算方式列表
+#define  CoreDataStoreType          @"KCLX"                         // 库存类型列表
+#define  CoreDataWarranty           @"BXZT"                         // 保修状态列表
+#define  CoreDataOrderStatus        @"KDZT"                         // 开单状态列表
+#define  CoreDataInterval           @"JGYS"                         // 间隔月数
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define PDF_NAME                    @"保时捷报价单.pdf"
+#define YUJIANDAN_NAME              @"保时捷预检单.pdf"
+
+
+/***************************************** 文案提示宏定义 *****************************************/
+#define HDAreadyTakeCarHintText          @"当前车辆已交车"
+#define HDAreadyCancelOrderHintText      @"当前增项单已取消"
+
+
+
+
+#define HDVersionCode           1000
+
+/*
+ ENVIRMENT_MODE 环境配置
+ 0 生产环境
+ 1 测试环境
+ */
+
+#ifdef ENVIRMENT_MODE
+    #if ENVIRMENT_MODE == 0
+        #define HDAppConfig_versionName             @"porsche_ios_release" //// 生产环境 V1.1.4
+    #elif ENVIRMENT_MODE == 1
+        #define HDAppConfig_versionName             @"porsche_ios_test"   //
+    #else
+        #warning" 未匹配环境"
+    #endif
+#endif
+//#define HDAppConfig_versionName             @"porsche_ios_release" // 生产环境 V1.1.4
+
+#define HDAppConfig_versionBaseUrl          @"http://120.26.109.92:8080/apps/"
+#define HDAppConfig_versionRelativePath     @"api/checkHandlecar"
+
+#define XcodeAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]//版本号
+
+
+#endif /* PrefixHeader_pch */

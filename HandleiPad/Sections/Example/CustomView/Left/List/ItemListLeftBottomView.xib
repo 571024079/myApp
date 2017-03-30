@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bMm-am-Cy1" customClass="ItemListLeftBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sure_bg_blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="G44-Bh-ntw"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Nd-m2-sfm">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptR-QD-fFj">
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="chooseMyCarBtAction:" destination="bMm-am-Cy1" eventType="touchUpInside" id="cxr-zK-BWT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="ptR-QD-fFj" firstAttribute="leading" secondItem="8Nd-m2-sfm" secondAttribute="leading" constant="1" id="37M-lF-69a"/>
+                        <constraint firstAttribute="bottom" secondItem="ptR-QD-fFj" secondAttribute="bottom" constant="1" id="JQu-lb-yqy"/>
+                        <constraint firstAttribute="trailing" secondItem="ptR-QD-fFj" secondAttribute="trailing" constant="1" id="V35-w5-X6H"/>
+                        <constraint firstItem="ptR-QD-fFj" firstAttribute="top" secondItem="8Nd-m2-sfm" secondAttribute="top" constant="1" id="chH-2V-fLB"/>
+                        <constraint firstAttribute="width" secondItem="8Nd-m2-sfm" secondAttribute="height" multiplier="1:1" id="eWr-ji-TLO"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9Z-9Y-2Hc">
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="看车辆进度">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="fullScreenBtAction:" destination="bMm-am-Cy1" eventType="touchUpInside" id="Pqu-bS-HS3"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的车辆" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Weg-Vy-9Bc">
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.16862745100000001" green="0.30196078430000001" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apt-xR-n4e">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="hiQ-jN-ryH"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="hiQ-jN-ryH"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="chooseMyCarBtAction:" destination="bMm-am-Cy1" eventType="touchUpInside" id="oWT-GF-Wbf"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHD-hJ-Tjr">
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="G44-Bh-ntw" firstAttribute="leading" secondItem="bMm-am-Cy1" secondAttribute="leading" id="0EI-Hd-2ac"/>
+                <constraint firstAttribute="bottom" secondItem="Apt-xR-n4e" secondAttribute="bottom" id="3aD-FQ-zTt"/>
+                <constraint firstItem="tHD-hJ-Tjr" firstAttribute="top" secondItem="bMm-am-Cy1" secondAttribute="top" id="D5y-N3-IVn"/>
+                <constraint firstItem="H9Z-9Y-2Hc" firstAttribute="width" secondItem="bMm-am-Cy1" secondAttribute="width" multiplier="1/2" id="E8n-mf-tmn"/>
+                <constraint firstAttribute="bottom" secondItem="Weg-Vy-9Bc" secondAttribute="bottom" constant="15" id="EHD-l4-YSE"/>
+                <constraint firstAttribute="bottom" secondItem="H9Z-9Y-2Hc" secondAttribute="bottom" id="Eps-8y-EWZ"/>
+                <constraint firstItem="8Nd-m2-sfm" firstAttribute="top" secondItem="bMm-am-Cy1" secondAttribute="top" constant="17" id="HYl-v5-iXP"/>
+                <constraint firstAttribute="bottom" secondItem="G44-Bh-ntw" secondAttribute="bottom" id="LzW-9X-l6c"/>
+                <constraint firstAttribute="trailing" secondItem="tHD-hJ-Tjr" secondAttribute="trailing" id="PaG-0M-vvI"/>
+                <constraint firstItem="Weg-Vy-9Bc" firstAttribute="leading" secondItem="8Nd-m2-sfm" secondAttribute="trailing" constant="5" id="Rd9-nf-d6E"/>
+                <constraint firstItem="Apt-xR-n4e" firstAttribute="top" secondItem="bMm-am-Cy1" secondAttribute="top" id="Rpn-NG-bXx"/>
+                <constraint firstItem="Apt-xR-n4e" firstAttribute="leading" secondItem="H9Z-9Y-2Hc" secondAttribute="trailing" constant="10" id="VzU-bU-8ZG"/>
+                <constraint firstItem="Apt-xR-n4e" firstAttribute="leading" secondItem="H9Z-9Y-2Hc" secondAttribute="trailing" id="WXA-DI-HLj"/>
+                <constraint firstAttribute="bottom" secondItem="8Nd-m2-sfm" secondAttribute="bottom" constant="17" id="cIK-1s-3DZ"/>
+                <constraint firstAttribute="bottom" secondItem="tHD-hJ-Tjr" secondAttribute="bottom" id="dLL-V3-FJk"/>
+                <constraint firstItem="Weg-Vy-9Bc" firstAttribute="top" secondItem="bMm-am-Cy1" secondAttribute="top" constant="14" id="eaF-ly-dIw"/>
+                <constraint firstAttribute="trailing" secondItem="Apt-xR-n4e" secondAttribute="trailing" id="f1r-lw-G68"/>
+                <constraint firstItem="Weg-Vy-9Bc" firstAttribute="leading" secondItem="8Nd-m2-sfm" secondAttribute="trailing" constant="7" id="fna-Hb-pdI"/>
+                <constraint firstItem="G44-Bh-ntw" firstAttribute="width" secondItem="bMm-am-Cy1" secondAttribute="width" multiplier="1/2" id="fz7-R6-9Z7"/>
+                <constraint firstItem="H9Z-9Y-2Hc" firstAttribute="top" secondItem="bMm-am-Cy1" secondAttribute="top" id="hCN-pZ-qlk"/>
+                <constraint firstItem="H9Z-9Y-2Hc" firstAttribute="leading" secondItem="bMm-am-Cy1" secondAttribute="leading" id="jhV-BR-pS8"/>
+                <constraint firstItem="tHD-hJ-Tjr" firstAttribute="leading" secondItem="Apt-xR-n4e" secondAttribute="trailing" id="kza-ct-gWk"/>
+                <constraint firstItem="tHD-hJ-Tjr" firstAttribute="leading" secondItem="Weg-Vy-9Bc" secondAttribute="trailing" id="lZb-rh-lcn"/>
+                <constraint firstItem="Weg-Vy-9Bc" firstAttribute="leading" secondItem="Apt-xR-n4e" secondAttribute="trailing" constant="-5" id="sH8-57-gzQ"/>
+                <constraint firstAttribute="trailing" secondItem="Weg-Vy-9Bc" secondAttribute="trailing" constant="10" id="t52-Ra-eNo"/>
+                <constraint firstItem="8Nd-m2-sfm" firstAttribute="centerX" secondItem="bMm-am-Cy1" secondAttribute="centerX" multiplier="3/2" constant="-30" id="u3z-cE-rLi"/>
+                <constraint firstAttribute="trailing" secondItem="Apt-xR-n4e" secondAttribute="trailing" constant="10" id="y1O-Ns-bfp"/>
+                <constraint firstItem="G44-Bh-ntw" firstAttribute="top" secondItem="bMm-am-Cy1" secondAttribute="top" id="yQG-dz-U3b"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="VzU-bU-8ZG"/>
+                    <exclude reference="y1O-Ns-bfp"/>
+                    <exclude reference="Rd9-nf-d6E"/>
+                    <exclude reference="sH8-57-gzQ"/>
+                    <exclude reference="t52-Ra-eNo"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="chooseMyCarBt" destination="Apt-xR-n4e" id="2XI-9r-inJ"/>
+                <outlet property="fullScreenBt" destination="H9Z-9Y-2Hc" id="777-5e-CXa"/>
+                <outlet property="rightLb" destination="Weg-Vy-9Bc" id="oGq-Lf-sUA"/>
+                <outlet property="statusBt" destination="ptR-QD-fFj" id="TKQ-EM-c1n"/>
+            </connections>
+            <point key="canvasLocation" x="168" y="1409"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="sure_bg_blue.png" width="658" height="182"/>
+    </resources>
+</document>

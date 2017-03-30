@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PorscheCartypeChooserCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLW-4Z-j5T">
+                        <rect key="frame" x="10" y="15.5" width="13" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="csb-9x-zgW"/>
+                            <constraint firstAttribute="height" constant="13" id="eDe-5W-5Cd"/>
+                        </constraints>
+                        <state key="normal" image="materialtime_list_checkbox_normal.png"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="911" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XU-IK-jd7">
+                        <rect key="frame" x="30" y="8" width="282" height="27.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2XU-IK-jd7" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="36y-i4-0l6"/>
+                    <constraint firstItem="eLW-4Z-j5T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3UM-hn-XnG"/>
+                    <constraint firstItem="eLW-4Z-j5T" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8fx-9U-9ai"/>
+                    <constraint firstItem="2XU-IK-jd7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="K7s-5V-aBd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="2XU-IK-jd7" secondAttribute="trailing" id="PsM-0N-XYg"/>
+                    <constraint firstItem="2XU-IK-jd7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="TOh-qq-ygL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="labelLeadingLayout" destination="K7s-5V-aBd" id="ShJ-Sx-624"/>
+                <outlet property="tickButton" destination="eLW-4Z-j5T" id="di1-9z-DAr"/>
+                <outlet property="titleLabel" destination="2XU-IK-jd7" id="vfo-b0-uos"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="materialtime_list_checkbox_normal.png" width="30" height="30"/>
+    </resources>
+</document>

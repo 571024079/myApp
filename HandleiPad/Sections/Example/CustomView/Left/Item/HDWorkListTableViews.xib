@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HDWorkListTableViews"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HDWorkListTableViews">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="534"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y2o-jn-iAx">
+                    <rect key="frame" x="1" y="1" width="302" height="532"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="U7o-dA-SkI"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="ekQ-JG-gBf"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pa4-S2-30n" userLabel="UpView">
+                    <rect key="frame" x="1" y="0.0" width="302" height="30"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="popViewList_more_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="87l-0w-ANt">
+                            <rect key="frame" x="141" y="2" width="20" height="10"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="上面还有" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mn-hu-RnA">
+                            <rect key="frame" x="0.0" y="12" width="302" height="18"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.16862745100000001" green="0.30196078430000001" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="2sS-g4-XVw"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEA-Yz-k8Q" userLabel="DownView">
+                    <rect key="frame" x="1" y="504" width="302" height="30"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="popViewList_more_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="3yh-0g-yr0">
+                            <rect key="frame" x="141" y="2" width="20" height="10"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="下面还有" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSj-cM-Rl5">
+                            <rect key="frame" x="0.0" y="12" width="302" height="18"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.16862745100000001" green="0.30196078430000001" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="TTE-ML-ogu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bEA-Yz-k8Q" secondAttribute="bottom" id="11C-vb-hge"/>
+                <constraint firstAttribute="trailing" secondItem="bEA-Yz-k8Q" secondAttribute="trailing" constant="1" id="3C9-xo-50W"/>
+                <constraint firstItem="Pa4-S2-30n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4O4-ZX-OWr"/>
+                <constraint firstItem="bEA-Yz-k8Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="1" id="8cy-qM-050"/>
+                <constraint firstItem="Y2o-jn-iAx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="1" id="AFX-3s-39r"/>
+                <constraint firstAttribute="bottom" secondItem="Y2o-jn-iAx" secondAttribute="bottom" constant="1" id="ODL-m5-XtV"/>
+                <constraint firstAttribute="trailing" secondItem="Pa4-S2-30n" secondAttribute="trailing" constant="1" id="nCZ-Yy-x7b"/>
+                <constraint firstItem="Pa4-S2-30n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="1" id="p4i-20-NQO"/>
+                <constraint firstAttribute="trailing" secondItem="Y2o-jn-iAx" secondAttribute="trailing" constant="1" id="vGr-ag-VhX"/>
+                <constraint firstItem="Y2o-jn-iAx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="ydc-mb-Dxg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="moreDownView" destination="bEA-Yz-k8Q" id="wXr-C1-RtQ"/>
+                <outlet property="moreUpView" destination="Pa4-S2-30n" id="cBU-1d-gO4"/>
+                <outlet property="tableView" destination="Y2o-jn-iAx" id="nEK-mT-s5s"/>
+            </connections>
+            <point key="canvasLocation" x="-281" y="31"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="popViewList_more_down.png" width="29" height="17"/>
+        <image name="popViewList_more_up.png" width="29" height="17"/>
+    </resources>
+</document>
